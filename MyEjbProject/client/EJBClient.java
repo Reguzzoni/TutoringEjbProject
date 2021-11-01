@@ -68,19 +68,10 @@ public class EJBClient
 
 		if (initialContext == null) {
 
-			// Properties extends HashTable
-
-			/**
-			 * TEST1
 			Properties prop = new Properties();            
-			prop.put(Context.INITIAL_CONTEXT_FACTORY, INITIAL_CONTEXT_FACTORY);            
-			prop.put(Context.URL_PKG_PREFIXES, JNP_INTERFACES);            
-			prop.put(Context.PROVIDER_URL, PROVIDER_URL); */ 
-			
-
-			final Properties prop = new Properties();
-			prop.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
-			prop.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
+ 		
+			prop.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.as.naming.InitialContextFactory");
+			prop.setProperty(Context.PROVIDER_URL,"remote://localhost:4447");
 			
 		    // create a context passing these properties
 			initialContext = new InitialContext(prop);
