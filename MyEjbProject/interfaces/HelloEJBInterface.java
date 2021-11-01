@@ -1,8 +1,8 @@
 package interfaces;
 
-import javax.ejb.Remote;
+//import javax.ejb.Remote;
 
-@Remote
+//@Remote
 public interface HelloEJBInterface {
 
 	public String sayHello();
