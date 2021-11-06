@@ -1,11 +1,9 @@
 package client;
 
-import java.util.Hashtable;
 import java.util.Properties;
+
 import javax.naming.Context;
-
 import javax.naming.InitialContext;
-
 import javax.naming.NamingException;
 
 import interfaces.HelloEJBInterface;
@@ -52,6 +50,7 @@ public class EJBClient
 			// 2. Lookup and cast
 
 			bean = (HelloEJBInterface) context.lookup(LOOKUP_STRING);
+			bean.sayHello();
 
 		} catch (NamingException e) {
 

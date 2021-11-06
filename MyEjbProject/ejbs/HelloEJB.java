@@ -4,7 +4,7 @@ import interfaces.HelloEJBInterface;
 
 public class HelloEJB implements HelloEJBInterface{
 	
-	//@Override
+	@Override
 	public String sayHello() {
 
 		return "HELLO WORLD FROM EJB PROJECT!";
